@@ -48,6 +48,9 @@ export default function Login({}) {
         setUserInput({ email: "", password: "" });
       } catch (error) {
         setError(error.message);
+        navigate("/");
+        alert("Invalid username or password, please try again.");
+        setUserInput({ email: "", password: "" });
       }
     }
   }

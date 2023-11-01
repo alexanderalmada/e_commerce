@@ -48,6 +48,8 @@ export default function Register({}) {
         setUserInput({ email: "", password: "" });
       } catch (error) {
         setError(error.message);
+        navigate("/");
+        alert("User already exists, please login instead.");
       }
     }
   }
